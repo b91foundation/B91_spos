@@ -54,18 +54,9 @@ object GenesisSettings {
         GenesisTransactionSettings("ARPnxBFbMzQQn4SncJ2WdH61ynqcPcninV4",0L,56)),
     1543286357000000000L, 60.seconds)
 
-  val TESTNET = GenesisSettings(1535356447650226656L, 1535356447650226656L, Constants.UnitsInVsys * Constants.TotalVsys,
-    ByteStr.decodeBase58("5n4ewwZh9F4MMpSvtdxLCu5MUKnhEyUth2w3zEfpuiX3vwS1STNCdi51fmowJuLT1CfFg1DuodSvxwBZDANvGNej").toOption,
+  val TESTNET = GenesisSettings(1566118800000000666L, 1566118800000000666L, Constants.UnitsInVsys * Constants.TotalVsys,
+    ByteStr.decodeBase58("3QRCgwvGBjDRWsqUGvimzJ9gGWeCnw6XiEtEwbDcQ2Up8YzVtRwBehbYEMxKhNaeeNNgpYiZgPALrini29E8bd1L").toOption,
     List(
-      GenesisTransactionSettings("ATxpELPa3yhE5h4XELxtPrW9TfXPrmYE7ze", (Constants.UnitsInVsys * Constants.TotalVsys * 0.30).toLong, 0),
-      GenesisTransactionSettings("ATtRykARbyJS1RwNsA6Rn1Um3S7FuVSovHK", (Constants.UnitsInVsys * Constants.TotalVsys * 0.20).toLong, 1),
-      GenesisTransactionSettings("ATtchuwHVQmNTsRA8ba19juGK9m1gNsUS1V", (Constants.UnitsInVsys * Constants.TotalVsys * 0.15).toLong, 2),
-      GenesisTransactionSettings("AU4AoB2WzeXiJvgDhCZmr6B7uDqAzGymG3L", (Constants.UnitsInVsys * Constants.TotalVsys * 0.05).toLong, 3),
-      GenesisTransactionSettings("AUBHchRBY4mVNktgCgJdGNcYbwvmzPKgBgN", (Constants.UnitsInVsys * Constants.TotalVsys * 0.06).toLong, 4),
-      GenesisTransactionSettings("AU6qstXoazCHDK5dmuCqEnnTWgTqRugHwzm", (Constants.UnitsInVsys * Constants.TotalVsys * 0.06).toLong, 5),
-      GenesisTransactionSettings("AU9HYFXuPZPbFVw8vmp7mFmHb7qiaMmgEYE", (Constants.UnitsInVsys * Constants.TotalVsys * 0.06).toLong, 6),
-      GenesisTransactionSettings("AUBLPMpHVV74fHQD8D6KosA76nusw4FqRr1", (Constants.UnitsInVsys * Constants.TotalVsys * 0.06).toLong, 7),
-      GenesisTransactionSettings("AUBbpPbymsrM8QiXqS3NU7CrD1vy1EyonCa", (Constants.UnitsInVsys * Constants.TotalVsys * 0.04).toLong, 8),
-      GenesisTransactionSettings("AU7nJLcT1mThXGTT1KDkoAtfPzc82Sgay1V", (Constants.UnitsInVsys * Constants.TotalVsys * 0.02).toLong, 9)),
-    1535356440000000000L, 60.seconds)
+      GenesisTransactionSettings("bLBViKY7dswNw2PfVKWW5ZEjdB736gJ5Cso", (Constants.UnitsInVsys * Constants.TotalVsys * 0.30).toLong, 0)),
+    1566118800000000000L, 60.seconds)
 }
