@@ -18,7 +18,7 @@ object ReleaseSlotsTransactionDiff {
     val sender = EllipticCurve25519Proof.fromBytes(tx.proofs.proofs.head.bytes.arr).toOption.get.publicKey
     val proofLength = tx.proofs.proofs.length
 
-    val MinimalSlotNumber = 10
+    val MinimalSlotNumber = 1
 
     val hasEnoughMiner = s.effectiveSlotAddressSize > MinimalSlotNumber
 

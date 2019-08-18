@@ -131,7 +131,7 @@ class BlockchainSettingsSpecification extends FlatSpec with Matchers {
     settings.stateFile should be(Some(new File("/b91/data/state.dat")))
     settings.checkpointFile should be(Some(new File("/b91/data/checkpoint.dat")))
     settings.minimumInMemoryDiffSize should be(1)
-    settings.addressSchemeCharacter should be('M')
+    settings.addressSchemeCharacter should be('9')
     settings.functionalitySettings.numOfSlots should be (60)
     settings.functionalitySettings.mintingSpeed should be (1)
     settings.functionalitySettings.allowContractTransactionAfterHeight should be (Int.MaxValue) // same as the setting
