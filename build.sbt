@@ -5,7 +5,7 @@ import sbtcrossproject.CrossPlugin.autoImport.crossProject
 
 enablePlugins(sbtdocker.DockerPlugin, JavaServerAppPackaging, JDebPackaging, SystemdPlugin)
 
-name := "vsys"
+name := "b91"
 organization := "systems.v"
 version := "0.2.1"
 scalaVersion in ThisBuild := "2.12.6"
@@ -24,7 +24,7 @@ fork in run := true
 Test / fork := true
 
 //assembly settings
-assemblyJarName in assembly := s"vsys-all-${version.value}.jar"
+assemblyJarName in assembly := s"b91-all-${version.value}.jar"
 assemblyMergeStrategy in assembly := {
   case PathList("META-INF", "io.netty.versions.properties") => MergeStrategy.concat
   case other => (assemblyMergeStrategy in assembly).value(other)
@@ -89,14 +89,14 @@ inConfig(IntegrationTest)(Seq(
 
 dockerfile in docker := {
   val configTemplate = (resourceDirectory in IntegrationTest).value / "template.conf"
-  val startVsys = (sourceDirectory in IntegrationTest).value / "container" / "start-vsys.sh"
+  val startB91 = (sourceDirectory in IntegrationTest).value / "container" / "start-b91.sh"
 
   new Dockerfile {
     from("anapsix/alpine-java:8_server-jre")
-    add(assembly.value, "/opt/vsys/vsys.jar")
-    add(Seq(configTemplate, startVsys), "/opt/vsys/")
-    run("chmod", "+x", "/opt/vsys/start-vsys.sh")
-    entryPoint("/opt/vsys/start-vsys.sh")
+    add(assembly.value, "/opt/b91/b91.jar")
+    add(Seq(configTemplate, startB91), "/opt/b91/")
+    run("chmod", "+x", "/opt/b91/start-b91.sh")
+    entryPoint("/opt/b91/start-b91.sh")
   }
 }
 
@@ -114,12 +114,12 @@ commands += Command.command("packageAll") { state =>
 
 inConfig(Linux)(Seq(
   maintainer := "v.systems",
-  packageSummary := "VSYS full node",
-  packageDescription := "VSYS full node"
+  packageSummary := "B91 full node",
+  packageDescription := "B91 full node"
 ))
 
 network := Network(sys.props.get("network"))
-normalizedName := "vsys"
+normalizedName := "b91"
 
 javaOptions in Universal ++= Seq(
   // -J prefix is required by the bash script
@@ -138,7 +138,7 @@ javaOptions in Universal ++= Seq(
   "-J-XX:+ParallelRefProcEnabled",
   "-J-XX:+UseStringDeduplication")
 
-mappings in Universal += (baseDirectory.value / s"vsys-${network.value}.conf" -> "doc/vsys.conf.sample")
+mappings in Universal += (baseDirectory.value / s"b91-${network.value}.conf" -> "doc/b91.conf.sample")
 packageSource := sourceDirectory.value / "package"
 upstartScript := {
   val src = packageSource.value / "upstart.conf"
