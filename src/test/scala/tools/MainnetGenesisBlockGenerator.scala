@@ -111,7 +111,7 @@ object MainnetGenesisBlockGenerator extends App {
      """.stripMargin)
   }
 
-  val (a, s) = generate('M', 60.seconds)
+  val (a, s) = generate('9', 60.seconds)
   print(a, s)
 
 }

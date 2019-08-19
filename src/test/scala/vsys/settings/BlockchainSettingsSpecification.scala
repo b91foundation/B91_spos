@@ -10,7 +10,7 @@ class BlockchainSettingsSpecification extends FlatSpec with Matchers {
   "BlockchainSettings" should "read custom values" in {
     val config = loadConfig(ConfigFactory.parseString(
       """vsys {
-        |  directory = "/vsys"
+        |  directory = "/b91"
         |  blockchain {
         |    minimum-in-memory-diff-blocks = 1
         |    type = CUSTOM
@@ -77,7 +77,7 @@ class BlockchainSettingsSpecification extends FlatSpec with Matchers {
   it should "read testnet settings" in {
     val config = loadConfig(ConfigFactory.parseString(
       """vsys {
-        |  directory = "/vsys"
+        |  directory = "/b91"
         |  blockchain {
         |    minimum-in-memory-diff-blocks = 1
         |    type = TESTNET
@@ -118,7 +118,7 @@ class BlockchainSettingsSpecification extends FlatSpec with Matchers {
   it should "read mainnet settings" in {
     val config = loadConfig(ConfigFactory.parseString(
       """vsys {
-        |  directory = "/vsys"
+        |  directory = "/b91"
         |  blockchain {
         |    minimum-in-memory-diff-blocks = 1
         |    type = MAINNET
@@ -130,7 +130,7 @@ class BlockchainSettingsSpecification extends FlatSpec with Matchers {
     val settings = BlockchainSettings.fromConfig(config)
 
     settings.minimumInMemoryDiffSize should be(1)
-    settings.addressSchemeCharacter should be('M')
+    settings.addressSchemeCharacter should be('9')
     settings.functionalitySettings.numOfSlots should be (60)
     settings.functionalitySettings.mintingSpeed should be (1)
     settings.functionalitySettings.allowContractTransactionAfterHeight should be (6100000) // same as the setting
