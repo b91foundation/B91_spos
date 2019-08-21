@@ -15,14 +15,14 @@ object FunctionalitySettings {
     mintingSpeed = 1,
     //TODO
     //set the value
-    allowContractTransactionAfterHeight = 6100000)
+    allowContractTransactionAfterHeight = 100)
 
   val TESTNET = FunctionalitySettings(
     numOfSlots = 60,
     mintingSpeed = 1,
     //TODO
     //set the value
-    allowContractTransactionAfterHeight = 4236000)
+    allowContractTransactionAfterHeight = 100)
 
   val configPath = "vsys.blockchain.custom.functionality"
 }
