@@ -18,9 +18,9 @@ class SwaggerDocService(val actorSystem: ActorSystem, val materializer: ActorMat
   extends SwaggerHttpService with ScorexLogging {
 
   override val host: String = settings.bindAddress + ":" + settings.port
-  override val info: Info = Info("The Web Interface to the VSYS Full Node API",
+  override val info: Info = Info("The Web Interface to the B91 Full Node API",
     Version.VersionString,
-    "VSYS Full Node",
+    "B91 Full Node",
     "License: MIT License",
     None,
     Some(License("MIT License", "https://github.com/virtualeconomy/vsys/blob/master/LICENSE"))
