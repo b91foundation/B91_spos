@@ -13,8 +13,8 @@ object SPoSCalc extends ScorexLogging {
   // update plan: 4 -> 15 slots, 2 -> 30 slots, 1 -> 60 slots
   val SlotGap = if (AddressScheme.current.chainId == '9'.toByte) 4 else 1
 
-  // update plan: 15 slots -> 36 vsys coins, 30 slots -> 18 vsys coins, 60 slots -> 9 vsys coins
-  val BaseReward = 900000000L
+  // update plan: 15 slots -> 3.6 b91 coins, 30 slots -> 1.8 b91 coins, 60 slots -> 0.9 b91 coins
+  val BaseReward = 90000000L
   val MintingReward = BaseReward * SlotGap
 
   def weightedBalaceCalc(heightDiff: Int, lastEffectiveBalance: Long, lastWeightedBalance: Long, cntEffectiveBalance: Long, fs: FunctionalitySettings): Long = {
