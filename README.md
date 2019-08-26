@@ -1,12 +1,12 @@
-# V Systems  [![Build Status](https://travis-ci.org/virtualeconomy/v-systems.svg?branch=master)](https://travis-ci.org/virtualeconomy/v-systems)
+# B91 Systems
 
-The code in master branch is under development. The latest release for each network can be found in the [Releases section](https://github.com/virtualeconomy/vsys/releases). You can switch to the corresponding tag and build the application.
+The code in master branch is under development. The latest release for each network can be found in the [Releases section](https://github.com/b91foundation/B91_spos/releases). You can switch to the corresponding tag and build the application.
 
 # Installation
 
-[How to configure V SYSTEMS Testnet node](https://github.com/virtualeconomy/v-systems/wiki/How-to-Install-V-Systems-Testnet-Node)
+[How to configure B91 SYSTEMS Testnet node](https://github.com/b91foundation/B91_spos/wiki/How-to-Install-V-Systems-Testnet-Node)
 
-[How to configure V SYSTEMS Mainnet node](https://github.com/virtualeconomy/v-systems/wiki/How-to-install-V-Systems-mainnet-Node)
+[How to configure B91 SYSTEMS Mainnet node](https://github.com/b91foundation/B91_spos/wiki/How-to-install-V-Systems-mainnet-Node)
 
 ## Compiling Packages from source
 
